@@ -14,14 +14,14 @@ class MessageConsumerimp(ID: String) : MessageConsumer {
 
     override fun handle(mhandle: Handle<Message>): MessageConsumer {
         this.handle = mhandle
-        Bus.bus.refresh()
+        Bus.getBus.refresh()
         return this
     }
 
     override fun handle(mhandle: (Message) -> Unit): MessageConsumer {
         var future: Future<Message> = Future()
         this.handle = future.applyMethod(mhandle)
-        Bus.bus.refresh()
+        Bus.getBus.refresh()
         return this
 
     }
@@ -34,6 +34,6 @@ class MessageConsumerimp(ID: String) : MessageConsumer {
      * 注销处理器
      */
     override fun unregister() {
-        Bus.bus.unregister(this)
+        Bus.getBus.unregister(this)
     }
 }

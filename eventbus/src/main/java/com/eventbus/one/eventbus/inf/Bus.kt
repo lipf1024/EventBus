@@ -4,7 +4,7 @@ import com.eventbus.one.eventbus.Busimp
 
 interface Bus {
     companion object {
-        val bus:Bus = Busimp()
+        val getBus:Bus = Busimp()
     }
     fun refresh():Bus
     fun sentwithCache(address: String, message: Message):Bus

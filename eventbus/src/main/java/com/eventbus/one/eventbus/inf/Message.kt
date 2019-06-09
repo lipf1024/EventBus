@@ -4,7 +4,7 @@ import com.eventbus.one.eventbus.Messageimp
 
 interface Message {
     companion object {
-        fun creat(): Message {
+        fun Creator(): Message {
             return Messageimp()
         }
     }

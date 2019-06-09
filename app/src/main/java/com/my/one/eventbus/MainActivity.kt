@@ -11,9 +11,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        Bus.bus.register("MMM"){r->
+        Bus.getBus.register("MMM"){ r->
             Log.d("QQQQQ",r.body())
         }
-        Bus.bus.sent("MMM", Message.creat().setMsg("asdnxccncj"))
+        Bus.getBus.sent("MMM", Message.Creator().setMsg("asdnxccncj"))
     }
 }

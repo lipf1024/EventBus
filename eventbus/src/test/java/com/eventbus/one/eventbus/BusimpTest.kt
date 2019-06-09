@@ -7,6 +7,6 @@ class BusimpTest {
 
     @Test
     fun register() {
-        Bus.bus.register("2333")
+        Bus.getBus.register("2333")
     }
 }

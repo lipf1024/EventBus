@@ -112,7 +112,7 @@ class Busimp : Bus {
                     handle_list?.foreach { handle ->
                         Log.d("MYCONNN", "handle" + now_address + "   ")
                         GlobalScope.launch {
-                            handle.gethandle()?.handle(msg ?: Message.creat())
+                            handle.gethandle()?.handle(msg ?: Message.Creator())
                         }
                     }
                     //移除第一个发送过的消息
@@ -136,7 +136,7 @@ class Busimp : Bus {
                         //处理器发送消息
                         handle_list?.foreach { handle ->
                             GlobalScope.launch {
-                                handle.gethandle()?.handle(msg ?: Message.creat())
+                                handle.gethandle()?.handle(msg ?: Message.Creator())
 
                             }
                         }
