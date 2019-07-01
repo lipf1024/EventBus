@@ -1,4 +1,4 @@
-# 基于kotlin的EventBus
+# 基于kotlin协程的异步EventBus
 
 ## 引入
 ```gradle
